@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zobrazení grafu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/site.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1>Cvičení: Jednoduchý graf</h1>
+        <form id="graphForm">
+            <div class="row">
+                <div class="form-group col-md-7">
+                    <label for="rowValue">Nastavte hodnotu</label>
+                    <input type="range" class="form-control" id="rowValue" min="0" max="50" value="25" />
+                    <div class="feedback"></div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="rowValue">Hodnota</label>
+                    <output class="form-control" id="rowValueNumber" value="25">25</output>
+                </div>
+            </div>
+            <div class="my-3">
+                <button class="btn btn-primary" type="submit" id="process">Aktualizace</button>
+            </div>
+        </form>
+        <div class="text-center m-1">
+            <svg width="400" height="50">
+                <defs>
+                    <linearGradient id="graphGradient"¨x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0" stop-color="#89f7fe"/>
+                        <stop offset="1" stop-color="#66a6ff"/>
+                    </linearGradient>
+                </defs>
+                <polygon id="rowGraph" points="0,0 0,100 50,100 50,0" />
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
